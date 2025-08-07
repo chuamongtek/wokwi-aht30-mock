@@ -1,0 +1,13 @@
+{
+  "name": "AHT30 Sensor (Mock)",
+  "type": "chip",
+  "tag": "aht30-mock",
+  "pinCount": 4,
+  "pins": ["VCC", "GND", "SCL", "SDA"],
+  "defaults": { "temperature": 25, "humidity": 50 },
+  "controls": [
+    { "name": "temperature", "type": "slider", "label": "Temperature (°C)", "min": -40, "max": 85 },
+    { "name": "humidity", "type": "slider", "label": "Humidity (%)", "min": 0, "max": 100 }
+  ],
+  "i2cAddresses": [ 56 ]
+}
