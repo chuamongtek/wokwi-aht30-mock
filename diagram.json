@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "devices": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "left": 80, "top": 40 },
+    { "type": "aht30-mock", "id": "aht", "left": 300, "top": 40, "attrs": {} }
+  ],
+  "connections": [
+    ["uno:5V", "aht:VCC"],
+    ["uno:GND", "aht:GND"],
+    ["uno:A4", "aht:SDA"],
+    ["uno:A5", "aht:SCL"]
+  ]
+}
