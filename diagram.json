@@ -1,26 +1,13 @@
 {
   "version": 1,
-  "author": "chuamongtek",
-  "editor": "wokwi",
-  "parts": [
-    {
-      "type": "wokwi-arduino-uno",
-      "id": "uno",
-      "top": 0,
-      "left": 0
-    },
-    {
-      "type": "chip",
-      "id": "aht30sensor",
-      "chip": "aht30",
-      "top": -60,
-      "left": 200
-    }
+  "devices": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "left": 80, "top": 40 },
+    { "type": "chip", "id": "aht", "chip": "aht30", "left": 280, "top": 40 }
   ],
   "connections": [
-    ["uno:5V", "aht30sensor:VCC", "red", ["vcc"]],
-    ["uno:GND", "aht30sensor:GND", "black", ["gnd"]],
-    ["uno:A5", "aht30sensor:SCL", "blue", ["i2c"]],
-    ["uno:A4", "aht30sensor:SDA", "green", ["i2c"]]
+    ["uno:5V", "aht:VCC"],
+    ["uno:GND", "aht:GND"],
+    ["uno:A4", "aht:SDA"],
+    ["uno:A5", "aht:SCL"]
   ]
 }
