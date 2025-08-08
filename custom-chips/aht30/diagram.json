@@ -2,7 +2,7 @@
   "version": 1,
   "devices": [
     { "type": "wokwi-arduino-uno", "id": "uno", "left": 80, "top": 40 },
-    { "type": "aht30-mock", "id": "aht", "left": 280, "top": 40, "attrs": {} }
+    { "type": "chip", "id": "aht", "chip": "aht30", "left": 280, "top": 40, "attrs": {} }
   ],
   "connections": [
     ["uno:5V", "aht:VCC"],
