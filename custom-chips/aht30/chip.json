@@ -1,13 +1,32 @@
 {
-  "name": "AHT30 Sensor (Mock)",
-  "type": "chip",
-  "tag": "aht30-mock",
-  "pinCount": 4,
-  "pins": ["VCC", "GND", "SCL", "SDA"],
-  "defaults": { "temperature": 25, "humidity": 50 },
-  "controls": [
-    { "name": "temperature", "type": "slider", "label": "Temperature (°C)", "min": -40, "max": 85 },
-    { "name": "humidity", "type": "slider", "label": "Humidity (%)", "min": 0, "max": 100 }
+  "name": "aht30",
+  "displayName": "AHT30 Sensor (Mock)",
+  "version": "1.0.0",
+  "author": "chuamongtek",
+  "pins": [
+    { "name": "VCC", "type": "power" },
+    { "name": "GND", "type": "ground" },
+    { "name": "SCL", "type": "i2cClock" },
+    { "name": "SDA", "type": "i2cData" }
   ],
-  "i2cAddresses": [ 56 ]
+  "controls": [
+    {
+      "id": "humidityPercent",
+      "label": "Humidity (%)",
+      "type": "range",
+      "min": 0,
+      "max": 100,
+      "step": 0.1
+    },
+    {
+      "id": "temperatureC",
+      "label": "Temperature (°C)",
+      "type": "range",
+      "min": -40,
+      "max": 85,
+      "step": 0.1
+    }
+  ],
+  "i2cAddresses": [56],
+  "firmware": "aht30.c"
 }
